@@ -1,0 +1,55 @@
+import 'dart:ui';
+import 'package:chattingapp/routes.dart';
+import 'package:flutter/material.dart';
+class getstarted extends StatefulWidget {
+  const getstarted({super.key});
+  @override
+  State<getstarted> createState() => _getstartedState();
+}
+
+class _getstartedState extends State<getstarted> {
+  bool changebutton=false;
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+       color: Colors.white,
+      child: Column(
+        children: <Widget>[Image.asset("assets/image/logu_image.jpeg",fit: BoxFit.cover,width: 350,height: 350,),
+        SizedBox(height: 20,),
+          Text("Chatting made fun with     Chatzy",style: TextStyle(
+            fontSize: 65,
+            fontWeight: FontWeight.bold,
+          ),
+          ),
+          SizedBox(height: 10,),
+          InkWell(//its for push button of container
+            onTap: () async {
+              setState((){
+                changebutton=true;
+              },);
+              await Future.delayed(Duration(seconds: 1));
+              await Navigator.pushNamed(context, Myroute.loginroute);
+              setState((){
+                changebutton=false;
+              },);
+            },
+            child:  AnimatedContainer(
+              duration: Duration(seconds: 1),
+              width:changebutton?50: 140,
+              height: 50,
+              alignment: Alignment.center,//its for font in center
+              child:  changebutton?Icon(Icons.verified,color: Colors.black,size: 50,)://for icon in button
+              Text("Let's Start",style: TextStyle(color: Colors.black,
+                  fontWeight: FontWeight.bold,fontSize: 25),
+              ),
+              decoration: BoxDecoration(//to circle & curve
+                color: Colors.yellowAccent,
+                borderRadius: BorderRadius.circular(changebutton?50: 10),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
