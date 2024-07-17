@@ -36,4 +36,5 @@ class _registerState extends State<register> {
           ),
           SizedBox(
             height: 15.0,
+
           ),
