@@ -1,0 +1,39 @@
+import 'dart:ui';
+import 'package:chattingapp/routes.dart';
+import 'package:flutter/material.dart';
+
+class register extends StatefulWidget {
+  const register({super.key});
+
+  @override
+  State<register> createState() => _registerState();
+}
+
+class _registerState extends State<register> {
+  final _formKey = GlobalKey<FormState>();
+  bool changeButton = false;
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.white,
+      child: Column(
+        children: <Widget>[
+          Image.asset(
+            "assets/image/logu_image.jpeg",
+            fit: BoxFit.cover,
+            width: 350,
+            height: 300,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "SignUp",
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
