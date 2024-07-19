@@ -16,7 +16,7 @@ class _getstartedState extends State<getstarted> {
       child: Column(
         children: <Widget>[Image.asset("assets/image/logu_image.jpeg",fit: BoxFit.cover,width: 350,height: 350,),
         SizedBox(height: 20,),
-          Text("Chatting made fun with   Us  Chatzy",style: TextStyle(
+          Text("Chatting Made fun with   Us  Chatzy",style: TextStyle(
             fontSize: 65,
             fontWeight: FontWeight.bold,
           ),
