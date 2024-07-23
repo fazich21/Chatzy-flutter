@@ -1,5 +1,5 @@
 class Myroute{
   static String getstartedroute="/getstarted";
   static String loginroute="/login";
-  static String regiterroute="/register";
+  static String regiterroute="/Register";
 }
